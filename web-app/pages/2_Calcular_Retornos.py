@@ -12,7 +12,7 @@ if 'coins_list' not in st.session_state:
     get_coins_list(base_url, KEY)
 
 today = date.today()
-one_year_ago = today - timedelta(365)
+one_year_ago = today - timedelta(364)
 coin = st.sidebar.selectbox('Selecione uma criptomoeda', st.session_state.coins_list, index=st.session_state.coins_list.index('bitcoin') if st.session_state.coins_list else None)
 start = st.sidebar.date_input("De: ", min_value=one_year_ago, max_value=today)
 end = st.sidebar.date_input("Até: ", min_value=one_year_ago, max_value=today)
