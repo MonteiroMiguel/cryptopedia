@@ -6,7 +6,7 @@ API_KEY = st.secrets['NEWS_API_KEY']
 newsapi = NewsApiClient(api_key=API_KEY)
 keywords_list = ['bitcoin', 'blockchain', 'memecoin', 'ethereum','solana']
 
-st.title('Notícias sobre Bitcoin')
+st.title('Notícias sobre Crypto')
 for elements in keywords_list:
     elements_news = newsapi.get_everything(q=elements, language='pt', sort_by='publishedAt')
     if elements_news['totalResults'] > 0:
